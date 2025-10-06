@@ -3,6 +3,8 @@
 *.log
 
 /agent-ui/node_modules
+/agent-ui/.next
+/agent-ui/out
 
 # Python
 __pycache__/
