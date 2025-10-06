@@ -73,7 +73,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center w-full">
               <div className="flex flex-col items-start justify-start w-full">
                 <div className="text-xl font-semibold text-start text-black">
-                  Welcome to the demo of Customer Support AI Agent
+                  {" Welcome to the demo of Customer Support AI Agent"}
                 </div>
                 <div className="text-sm text-start text-black">
                   {
