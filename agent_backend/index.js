@@ -5,7 +5,10 @@ require("dotenv").config();
 const app = express();
 
 var corsOptions = {
-  origin: ["https://localhost:3701"],
+  origin: [
+    "https://localhost:3701",
+    "https://customer-support-ai-agent-beta.vercel.app",
+  ],
 };
 
 app.use(cors(corsOptions));

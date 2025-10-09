@@ -9,10 +9,10 @@ const { getAgentResponse } = require("./agent");
 
 const client = new DynamoDBClient({
   region: process.env.AWS_REGION_1,
-  //   credentials: {
-  //     accessKeyId: process.env.AWS_ACCESS_KEY_1,
-  //     secretAccessKey: process.env.AWS_SECRET_KEY_1,
-  //   },
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_1,
+    secretAccessKey: process.env.AWS_SECRET_KEY_1,
+  },
 });
 
 const ddbDocClient = DynamoDBDocumentClient.from(client);
@@ -105,7 +105,7 @@ const getTotalRuns = async () => {
     const data = await ddbDocClient.send(new ScanCommand(params));
     return data.Items.length;
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.log(error);
   }
 };
 
