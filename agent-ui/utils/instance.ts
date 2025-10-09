@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import toast from "react-hot-toast";
 
-const BASE_URL = "http://localhost:9000/api";
+const BASE_URL = "https://customer-support-ai-agent.onrender.com/api";
 
 const instance = axios.create({
   baseURL: BASE_URL,
